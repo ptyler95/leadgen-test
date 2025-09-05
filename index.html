@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get More Leads - Free Consultation</title>
+    <title>Structured Data Implementation - Boost Your SEO & AI Visibility</title>
     <style>
         * {
             margin: 0;
@@ -25,26 +25,37 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 20px;
             font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            font-weight: 600;
         }
         
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 40px;
-            opacity: 0.9;
+            opacity: 0.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .cta-button {
-            background: #ff6b6b;
+            background: #00d4aa;
             color: white;
             padding: 18px 40px;
             font-size: 1.2rem;
@@ -55,99 +66,252 @@
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
         }
         
         .cta-button:hover {
-            background: #ff5252;
+            background: #00c49a;
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 8px 30px rgba(0, 212, 170, 0.4);
         }
         
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: #f8f9fa;
+        /* Why Structured Data Section */
+        .why-section {
+            padding: 100px 0;
+            background: white;
         }
         
-        .features h2 {
+        .why-section h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 60px;
-            color: #2c3e50;
+            color: #1e3c72;
         }
         
-        .features-grid {
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .benefit {
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit:hover {
+            transform: translateY(-5px);
+            border-color: #00d4aa;
+            box-shadow: 0 10px 30px rgba(0, 212, 170, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+        
+        .benefit h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+        
+        .benefit p {
+            font-size: 1.1rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+        
+        /* AI/LLM Section */
+        .ai-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .ai-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .ai-section h2 {
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .ai-section p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+        
+        .ai-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .ai-benefit {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .ai-benefit h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #00d4aa;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+        
+        .how-it-works .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #64748b;
+            margin-bottom: 60px;
+        }
+        
+        .steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
         
-        .feature {
+        .step {
             background: white;
             padding: 40px;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            position: relative;
             transition: transform 0.3s ease;
         }
         
-        .feature:hover {
+        .step:hover {
             transform: translateY(-5px);
         }
         
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00d4aa;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         
-        .feature h3 {
-            font-size: 1.5rem;
+        .step-icon {
+            font-size: 3rem;
+            margin: 20px 0 25px;
+            color: #1e3c72;
+        }
+        
+        .step h3 {
+            font-size: 1.6rem;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #1e3c72;
+        }
+        
+        .step p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .step-duration {
+            background: #e0f2fe;
+            color: #0277bd;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
         }
         
         /* Lead Form Section */
         .lead-form-section {
-            padding: 80px 0;
+            padding: 100px 0;
             background: white;
         }
         
         .form-container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
             text-align: center;
         }
         
         .form-container h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: #1e3c72;
         }
         
         .form-container p {
             font-size: 1.2rem;
             margin-bottom: 40px;
-            color: #666;
+            color: #64748b;
         }
         
         .lead-form {
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            background: #f8fafc;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
         
         .form-group {
             margin-bottom: 25px;
-            text-align: left;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
         }
         
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #2c3e50;
+            color: #1e3c72;
         }
         
         .form-group input,
@@ -155,17 +319,18 @@
         .form-group textarea {
             width: 100%;
             padding: 15px;
-            border: 2px solid #e1e5e9;
+            border: 2px solid #e2e8f0;
             border-radius: 10px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
+            background: white;
         }
         
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #00d4aa;
         }
         
         .form-group textarea {
@@ -174,9 +339,9 @@
         }
         
         .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 18px 50px;
+            padding: 20px 50px;
             font-size: 1.2rem;
             font-weight: 600;
             border: none;
@@ -184,16 +349,17 @@
             cursor: pointer;
             width: 100%;
             transition: all 0.3s ease;
+            margin-top: 10px;
         }
         
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 30px rgba(30, 60, 114, 0.4);
         }
         
         /* Footer */
         .footer {
-            background: #2c3e50;
+            background: #1e3c72;
             color: white;
             text-align: center;
             padding: 40px 0;
@@ -202,20 +368,28 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
             
-            .hero p {
-                font-size: 1.1rem;
+            .hero .subtitle {
+                font-size: 1.2rem;
             }
             
-            .features h2,
-            .form-container h2 {
-                font-size: 2rem;
+            .benefits-grid,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
             }
             
             .lead-form {
-                padding: 30px 20px;
+                padding: 30px 25px;
+            }
+            
+            .ai-benefits {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -224,31 +398,97 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Double Your Leads in 30 Days</h1>
-            <p>Get a free consultation and discover proven strategies to grow your business</p>
-            <a href="#lead-form" class="cta-button">Get My Free Consultation</a>
+            <h1>Boost Your SEO & AI Visibility with Structured Data</h1>
+            <div class="subtitle">Get Found by Search Engines AND AI Systems</div>
+            <p>Professional structured data implementation that makes your website speak the language of search engines, AI chatbots, and LLMs like ChatGPT and Claude.</p>
+            <a href="#lead-form" class="cta-button">Schedule Free Discovery Call</a>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Why Structured Data Section -->
+    <section class="why-section">
         <div class="container">
-            <h2>Why Choose Our Lead Generation System?</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Targeted Approach</h3>
-                    <p>We identify and target your ideal customers using data-driven strategies that convert.</p>
+            <h2>Why Structured Data Matters for Your Business</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <span class="benefit-icon">🎯</span>
+                    <h3>Better Search Rankings</h3>
+                    <p>Structured data helps Google understand your content better, leading to improved search rankings and rich snippets that stand out in search results.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Fast Results</h3>
-                    <p>See qualified leads start flowing within the first 7 days of implementation.</p>
+                <div class="benefit">
+                    <span class="benefit-icon">📊</span>
+                    <h3>Rich Search Results</h3>
+                    <p>Get eye-catching rich snippets, star ratings, pricing info, and other enhanced features that increase click-through rates by up to 30%.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">📈</div>
-                    <h3>Scalable Growth</h3>
-                    <p>Our system grows with your business, ensuring consistent lead flow at any scale.</p>
+                <div class="benefit">
+                    <span class="benefit-icon">🔍</span>
+                    <h3>Local SEO Boost</h3>
+                    <p>Essential for local businesses - structured data improves your visibility in local search, Google My Business, and map results.</p>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">⚡</span>
+                    <h3>Voice Search Ready</h3>
+                    <p>Voice assistants like Alexa and Siri rely on structured data to provide accurate answers about your business and services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI/LLM Section -->
+    <section class="ai-section">
+        <div class="container">
+            <div class="ai-content">
+                <h2>Future-Proof Your Business for the AI Era</h2>
+                <p>ChatGPT, Claude, Google Bard, and other AI systems are becoming the new search engines. They rely on structured data to understand and recommend businesses.</p>
+                <p>Without proper structured data, your business is invisible to AI systems that millions of people use daily to find services and make purchasing decisions.</p>
+                
+                <div class="ai-benefits">
+                    <div class="ai-benefit">
+                        <h4>AI Recommendations</h4>
+                        <p>Get recommended by ChatGPT and other AI assistants when users ask for services like yours</p>
+                    </div>
+                    <div class="ai-benefit">
+                        <h4>Accurate Information</h4>
+                        <p>Ensure AI systems have correct details about your business, hours, services, and contact info</p>
+                    </div>
+                    <div class="ai-benefit">
+                        <h4>Competitive Advantage</h4>
+                        <p>Most businesses haven't optimized for AI yet - be ahead of the curve</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How We Get You Results</h2>
+            <p class="subtitle">Our proven 3-step process to implement and optimize your structured data</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📞</div>
+                    <h3>Discovery Call</h3>
+                    <p>We'll analyze your current website, understand your business goals, and identify the best structured data opportunities for your industry.</p>
+                    <div class="step-duration">30 minutes</div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🛠️</div>
+                    <h3>Create & Deploy</h3>
+                    <p>Our team creates custom structured data schemas for your business and implements them across your website using JSON-LD, the Google-preferred format.</p>
+                    <div class="step-duration">1-2 weeks</div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">📈</div>
+                    <h3>Monitor & Optimize</h3>
+                    <p>We track your search performance, rich snippet appearances, and make ongoing optimizations to maximize your visibility and results.</p>
+                    <div class="step-duration">Ongoing</div>
                 </div>
             </div>
         </div>
@@ -258,50 +498,56 @@
     <section class="lead-form-section" id="lead-form">
         <div class="container">
             <div class="form-container">
-                <h2>Get Your Free Consultation</h2>
-                <p>Fill out the form below and we'll analyze your current lead generation and show you exactly how to improve it.</p>
+                <h2>Ready to Get Started?</h2>
+                <p>Schedule your free 30-minute discovery call to see how structured data can transform your online visibility.</p>
                 
                 <form class="lead-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company/Website *</label>
+                            <input type="text" id="company" name="company" required placeholder="yourwebsite.com">
+                        </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="industry">Industry</label>
-                        <select id="industry" name="industry">
-                            <option value="">Select your industry</option>
-                            <option value="technology">Technology</option>
-                            <option value="healthcare">Healthcare</option>
-                            <option value="finance">Finance</option>
-                            <option value="retail">Retail</option>
+                    <div class="form-group full-width">
+                        <label for="business-type">Type of Business</label>
+                        <select id="business-type" name="business-type">
+                            <option value="">Select your business type</option>
+                            <option value="local-business">Local Business (Restaurant, Salon, etc.)</option>
+                            <option value="ecommerce">E-commerce Store</option>
+                            <option value="professional-services">Professional Services (Law, Accounting, etc.)</option>
+                            <option value="healthcare">Healthcare/Medical Practice</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="technology">Technology/Software</option>
                             <option value="manufacturing">Manufacturing</option>
-                            <option value="consulting">Consulting</option>
+                            <option value="nonprofit">Non-profit Organization</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="challenge">What's your biggest lead generation challenge?</label>
-                        <textarea id="challenge" name="challenge" placeholder="Tell us about your current situation..."></textarea>
+                    <div class="form-group full-width">
+                        <label for="current-seo">What's your biggest SEO challenge right now?</label>
+                        <textarea id="current-seo" name="current-seo" placeholder="Tell us about your current search visibility, any SEO efforts you've tried, or specific goals you have..."></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">Get My Free Consultation</button>
+                    <button type="submit" class="submit-btn">Schedule My Free Discovery Call</button>
                 </form>
             </div>
         </div>
@@ -310,7 +556,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Lead Generation Pro. All rights reserved.</p>
+            <p>&copy; 2024 Structured Data Pro. Making your business visible to search engines and AI systems.</p>
         </div>
     </footer>
 
@@ -323,7 +569,7 @@
             });
         });
 
-        // Form submission handler (placeholder - you'll connect this to your backend)
+        // Form submission handler
         document.querySelector('.lead-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -335,11 +581,34 @@
             }
             
             // For now, just show an alert (replace with actual form submission)
-            alert('Thanks for your interest! We\'ll contact you within 24 hours.');
+            alert('Thanks for your interest! We\'ll contact you within 24 hours to schedule your discovery call.');
             console.log('Form data:', data);
             
             // You can replace the above with actual form submission to your backend
             // Example: fetch('/submit-lead', { method: 'POST', body: formData })
+        });
+
+        // Add some interactive animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.benefit, .step, .ai-benefit').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
         });
     </script>
 </body>
